@@ -165,23 +165,35 @@ let PI = 3.14;
 // Birlar xonasi
 
 //! Integer1. Uch xonali son berilgan. Oldin uni birliklar xonasidagi raqamni so`ng o`nliklar xonasidagi raqamni chiqaruvchi programma tuzilsin.
+let abc = 769;
+let c = abc % 10;
+let b = ((abc - c) / 10) % 10;
+let a = (abc - b * 10 - c) / 100;
+
+console.log(a, b, c);
 
 //! Integer2. Uch xonali son berilgan. Uning raqamlar yig`indisini aniqlovchi programma tuzilsin.
 
+console.log(a + b + c);
 //! Integer3. Uch xonali son berilgan. Uning raqamlarini teskari tartibda yozishdan hosil bo`lgan sonni aniqlovchi program tuzilsin.
+console.log(c * 100 + b * 10 + a);
 
 //! Integer4. Uch xonali son berilgan. Uning o`nliklar xonasidagi raqam bilan yuzliklar xonasidagi raqamni almashtirishdan hosil bo`lgan sonni aniqlovchi programma tuzilsin.
 // Input: 123
 // Output: 213
-
+console.log(b * 100 + a * 10 + c);
 //! Integer5. Uch xonali son berilgan. Uning o`nliklar xonasidagi raqam bilan birliklar xonasidagi raqamni almashtirishdan hosil bo`lgan sonni aniqlovchi programma tuzilsin.
 // Input: 123
 // Output: 132
-
+console.log(a * 100 + c * 10 + b);
 //! Integer6. 999 dan katta bo`lgan son berilgan. Bir marta bo`lib butunni va bo`lib qoldiqni olish operatsiyasidan foydalanib berilgan sonni mingliklar xonasidagi sonni aniqlovchi programma tuzilsin.
 // Input: 98123
 // Output: 8
 
+let num = 98123;
+let x = ((num - (num % 1000)) / 1000) % 10;
+
+console.log(x);
 // 1 minut = 60 s
 // 1 soat = 60 minut
 // 1 soat = 3600s
@@ -194,3 +206,10 @@ let PI = 3.14;
 //! Integer9. Kun boshidan boshlab N sekund vaqt o`tti. Kun boshidan boshlab qancha minut va sekund o'tganini aniqlovchi programma tuzilsin.
 
 //! Integer10. Kun boshidan boshlab N sekund vaqt o`tti. Kun boshidan boshlab qancha soat va sekund o'tganini aniqlovchi programma tuzilsin.
+// let numSecund = 65364;
+// let a = numSecund % 3600;
+// let b = a % 60;
+// let hour = (numSecund - a) / 3600;
+// let minut = (a - b) / 60;
+
+// console.log(hour, minut, (secund = b));
