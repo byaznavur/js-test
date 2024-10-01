@@ -73,44 +73,64 @@ let PI = 3.14;
 // UYGA VAZIFA
 
 //! Begin1. To`g`ri to`rtburchakning tomonlari a va b berilgan. Uning yuzasi va perimetri aniqlansin.
-// S = a * b
-// P = 2 * (a + b)
+// let a = 12;
+// let b = 213;
+// let S = a * b
+// let  P = 2 * (a + b)
 
 //! Begin2. Aylananing diametri d berilgan. Uning uzunligi va yuzasi aniqlansin.
-// L = PI * d
-// PI = 3.14
-// r = d / 2;
-// S = PI * r**2
+// let d = 12;
+// let L = PI * d;
+
+// let r = d / 2;
+// let S = PI * r ** 2;
 
 //! Begin3. Kubning yon tomoni a berilgan. Uning hajmini V va to`la sirti S aniqlansin.
-// V = a**3
-// S = 6 * a**2
+// let a = 23;
+// let  V = a**3
+// let  S = 6 * a**2
 
 //! Begin4. Paralelepepidning tomonlari a, b, c berilgan. Uning hajmi Vni va to'la sirti Sni aniqlansin.
-// V = a * b * c
-// S = 2 * (a * b + b * c + a * c)
+
+// let a = 1,
+//   b = 3,
+//   c = 4;
+// let  V = a * b * c
+// let  S = 2 * (a * b + b * c + a * c)
 
 //! Begin5. Ikkita son a va b berilgan. Ularning o`rta arifmetigi M aniqlansin.
-// M = (a + b) / 2
+// let a = 23,
+//   b = 3;
+//let  M = (a + b) / 2
 
 //! Begin6. To`gri uchburchakning katetlari a va b berilgan. Uning gipotenuzasi c va perimetri P aniqlansin.
-// c = a2+b2
-// P = a + b + c
+//let c = (a**2+b**2)**(1/2)
+// let P = a + b + c
 
 //! Begin7. Umumiy markazga bo`lgan ikkita aylana radiusi berilgan. r1, r2. (r1 > r2). Ularning yuzalari S1 va S2, ularning ayirmasi S aniqlansin.
-// S1 = PI * r1
-// S2 = PI * r2
-// S = PI * (r1**2 − r2**2).
+// let  S1 = PI * r1
+// let  S2 = PI * r2
+// let  S = PI * (r1**2 − r2**2).
 
 //! Begin8. Aylananing uzunligi L berilgan. Uning radiusi R va yuzasi S aniqlansin.
-// L = 2 * PI * R
-// S = PI * R**2
-// PI = 3.14
+//let L = 2 * PI * R
+//let S = PI * R**2
 
 //! Begin9. Tekislikdagi berilgan ikki nuqta (x1, y1) va (x2, y2) orasidagi L masofa topilsin.
-// L = (x1-x2)2 + (y1 - y2)2
+//let  L = ((x1-x2)**2 + (y1 - y2)**2)**(1/2)
 
 //! Begin10. A, B va C sonlari berilgan. A ni qiymati B ga, B ni qiymati C ga va C ni qiymati A ga almashtirilsin. A, B va C ning yangi qiymatilari ekranga chiqarilsin.
+
+// let A = 12;
+// let B = 11;
+// let C = 14;
+// let K = A;
+// let L = B;
+// let Z = C;
+
+// A = L;
+// B = Z;
+// C = K;
 
 //! Begin11. x ning qiymati berilganda y funksiyaning qiymati aniqlansin.
 // y = 4 * (x - 3)**6 - 7 * (x - 3)**3 + 2
@@ -122,8 +142,12 @@ let PI = 3.14;
 // Tc = (Tf - 32) * 5/9
 
 //! Begin14. X kg shokolad A so`m turadi va Y kg konfet B so`m turadi. 1 kg shokolad 1 kg konfetdan qancha qimmat turishini aniqlovchi programma tuzilsin.
+// let kgX = A / X;
+// let kgY = B / Y;
 
+// let res = kgX / kgY;
 //! Begin15. Abdulaziz X kg olmani A so’mdan, Y kg olmani B so’mdan sotib oldi. Abdulaziz jami qancha savdo qilgan?
+// let sum = X * A + Y * B;
 
 // Keyingi misollarda xonalarni qanday atalishini bilish muhim !
 
