@@ -203,7 +203,7 @@
 // console.log(num);
 
 //! if2. Butun son berilgan. Agar, berilgan son musbat bo`lsa, 1 ga oshiring, agar manfiy bo`lsa 2 ga kamaytiring. Agar 0 ga teng bo`lsa, 10 ni o`zlashtirsin. Hosil bo`lgan sonni ekranga chiqaruvchi programma tuzilsin.
-let num = 12;
+// let num = 12;
 
 if (num > 0) {
   num++;
@@ -337,7 +337,37 @@ if (x <= 0) {
 
 //! if17. Yil berilgan (musbat butun son). Berilgan yilda nechta kun borligini aniqlovchi programma tuzilsin. Kabisa yilida 366 kun bor, kabisa bo'lmagan yilda 365 kun bor. Kabisa yil deb 4 ga karrali yillarga aytiladi. Lekin 100 ga karrali yillar ichida faqat 400 ga karrali bo'lganlari kabisa yil hisoblanadi. Masalan 300, 1300 va 1900 kabisa yili emas. 1200 va 2000 kabisa yili.
 
+// let year = 2024;
+
+// if (year % 4 == 0 || year % 100 != 0 || year % 400 == 0) {
+//   console.log(`${year} - kabisa yil.`);
+// } else {
+//   console.log(`${year} - kabisa bolmagan yil.`);
+// }
+
 //! if18. 1-999 oraliqdagi sonlar berilgan. Berilgan sonni "ikki xonali juft son", "uch xonali toq son" va x.k. ekranga yozadigan programma tuzilsin.
+
+// let num = 76;
+
+// if (num < 10) {
+//   if (num % 2 == 0) {
+//     console.log("Bir xonali juft raqam !");
+//   } else {
+//     console.log("Bir xonali toq raqam !");
+//   }
+// } else if (num > 9 && num <= 99) {
+//   if (num % 2 == 0) {
+//     console.log("Ikki xonali juft raqam !");
+//   } else {
+//     console.log("Ikki xonali toq raqam !");
+//   }
+// } else if (num > 99) {
+//   if (num % 2 == 0) {
+//     console.log("Uch xonali juft raqam !");
+//   } else {
+//     console.log("Uch xonali toq raqam !");
+//   }
+// }
 
 //
 
