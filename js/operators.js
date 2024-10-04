@@ -165,11 +165,11 @@ let PI = 3.14;
 // Birlar xonasi
 
 //! Integer1. Uch xonali son berilgan. Oldin uni birliklar xonasidagi raqamni so`ng o`nliklar xonasidagi raqamni chiqaruvchi programma tuzilsin.
+
 let abc = 769;
 let c = abc % 10;
 let b = ((abc - c) / 10) % 10;
 let a = (abc - b * 10 - c) / 100;
-
 console.log(a, b, c);
 
 //! Integer2. Uch xonali son berilgan. Uning raqamlar yig`indisini aniqlovchi programma tuzilsin.
