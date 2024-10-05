@@ -396,3 +396,494 @@ if (x <= 0) {
 //? Case12. Sharq kalendarida 60 yillik davr qabul qilingan. Yil muchali 5 ta rang (yashil, qizil, sariq, oq va qora) va 12 ta hayvon (sichqon, sigir, yo'lbars, quyon, ajdar, ilon, ot, qo`y, maymun, tovuq, it va to’ngizlardan) nomlarining kombinatsiyasidan kelib chiqadi. Yilning raqamiga qarab uning muchalini aniqlovchi programma tuzilsin. 1984-davr boshi: "Yashil sichqon yili".
 
 // Qudrat Abdurahimov ustozimizning C++ dastur nomli kitoblaridan saralab olingan masalalar !
+
+// let k = 3; // Masalan, 3 berilgan
+
+// switch (k) {
+//   case 1:
+//     console.log("Yomon");
+//     break;
+//   case 2:
+//     console.log("Qoniqarsiz");
+//     break;
+//   case 3:
+//     console.log("Qoniqarli");
+//     break;
+//   case 4:
+//     console.log("Yaxshi");
+//     break;
+//   case 5:
+//     console.log("A'lo");
+//     break;
+//   default:
+//     console.log("Xato");
+// }
+
+// let month = 2; // Masalan, 2 chi oy
+
+// switch (month) {
+//   case 12:
+//   case 1:
+//   case 2:
+//     console.log("Qish");
+//     break;
+//   case 3:
+//   case 4:
+//   case 5:
+//     console.log("Bahor");
+//     break;
+//   case 6:
+//   case 7:
+//   case 8:
+//     console.log("Yoz");
+//     break;
+//   case 9:
+//   case 10:
+//   case 11:
+//     console.log("Kuz");
+//     break;
+//   default:
+//     console.log("Xato oy raqami");
+// }
+
+// let month = 2; // Masalan, fevral
+
+// switch (month) {
+//   case 1:
+//   case 3:
+//   case 5:
+//   case 7:
+//   case 8:
+//   case 10:
+//   case 12:
+//     console.log("31 kun");
+//     break;
+//   case 4:
+//   case 6:
+//   case 9:
+//   case 11:
+//     console.log("30 kun");
+//     break;
+//   case 2:
+//     console.log("28 kun");
+//     break;
+//   default:
+//     console.log("Xato oy raqami");
+// }
+
+// let unit = 3; // Uzunlik birligi (masalan, metr)
+// let length = 5; // Masalan, 5 metr
+
+// switch (unit) {
+//   case 1: // desimetr
+//     console.log(`${length / 10} metr`);
+//     break;
+//   case 2: // kilometr
+//     console.log(`${length * 1000} metr`);
+//     break;
+//   case 3: // metr
+//     console.log(`${length} metr`);
+//     break;
+//   case 4: // millimetr
+//     console.log(`${length / 1000} metr`);
+//     break;
+//   case 5: // santimetr
+//     console.log(`${length / 100} metr`);
+//     break;
+//   default:
+//     console.log("Xato birlik");
+// }
+
+// let unit = 1; // Og'irlik birligi (masalan, kilogramm)
+// let weight = 5; // Masalan, 5 kilogramm
+
+// switch (unit) {
+//   case 1: // kilogramm
+//     console.log(`${weight} kilogramm`);
+//     break;
+//   case 2: // milligramm
+//     console.log(`${weight / 1e6} kilogramm`);
+//     break;
+//   case 3: // gramm
+//     console.log(`${weight / 1000} kilogramm`);
+//     break;
+//   case 4: // tonna
+//     console.log(`${weight * 1000} kilogramm`);
+//     break;
+//   case 5: // sentner
+//     console.log(`${weight * 100} kilogramm`);
+//     break;
+//   default:
+//     console.log("Xato birlik");
+// }
+
+// let day = 31;
+// let month = 12;
+
+// console.log(`Sana: ${day}-${month}`);
+
+// let day = 31;
+// let month = 12;
+
+// switch (month) {
+//   case 12:
+//     if (day === 31) {
+//       day = 1;
+//       month = 1;
+//     } else {
+//       day++;
+//     }
+//     break;
+//   case 1:
+//     if (day === 31) {
+//       day = 1;
+//       month++;
+//     } else {
+//       day++;
+//     }
+//     break;
+//   case 2:
+//     if (day === 28) {
+//       day = 1;
+//       month++;
+//     } else {
+//       day++;
+//     }
+//     break;
+//   case 3:
+//     if (day === 31) {
+//       day = 1;
+//       month++;
+//     } else {
+//       day++;
+//     }
+//     break;
+//   case 4:
+//   case 6:
+//   case 9:
+//   case 11:
+//     if (day === 30) {
+//       day = 1;
+//       month++;
+//     } else {
+//       day++;
+//     }
+//     break;
+//   default:
+//     console.log("Xato oy raqami");
+// }
+
+// console.log(`Keyingi sana: ${day}-${month}`);
+
+// let direction = "s"; // Shimol
+// let command = 1; // Masalan, chapga buril
+
+// switch (direction) {
+//   case "s":
+//     switch (command) {
+//       case 0:
+//         break; // Harakatni davom ettirish
+//       case 1:
+//         direction = "g"; // chapga
+//         break;
+//       case 2:
+//         direction = "q"; // o'ngga
+//         break;
+//     }
+//     break;
+//   case "j":
+//     switch (command) {
+//       case 0:
+//         break; // Harakatni davom ettirish
+//       case 1:
+//         direction = "q"; // chapga
+//         break;
+//       case 2:
+//         direction = "g"; // o'ngga
+//         break;
+//     }
+//     break;
+//   case "q":
+//     switch (command) {
+//       case 0:
+//         break; // Harakatni davom ettirish
+//       case 1:
+//         direction = "s"; // chapga
+//         break;
+//       case 2:
+//         direction = "j"; // o'ngga
+//         break;
+//     }
+//     break;
+//   case "g":
+//     switch (command) {
+//       case 0:
+//         break; // Harakatni davom ettirish
+//       case 1:
+//         direction = "j"; // chapga
+//         break;
+//       case 2:
+//         direction = "s"; // o'ngga
+//         break;
+//     }
+//     break;
+// }
+
+// console.log(`Robot yo'nalishi: ${direction}`);
+
+// let n = 11; // Masalan, valet
+// let m = 2; // Masalan, olma
+
+// let qiymatlar;
+// switch (n) {
+//   case 11:
+//     qiymatlar = "valet";
+//     break;
+//   case 12:
+//     qiymatlar = "dama";
+//     break;
+//   case 13:
+//     qiymatlar = "qirol";
+//     break;
+//   case 14:
+//     qiymatlar = "tuz";
+//     break;
+//   default:
+//     qiymatlar = n;
+// }
+
+// let turlar;
+// switch (m) {
+//   case 1:
+//     turlar = "g'isht";
+//     break;
+//   case 2:
+//     turlar = "olma";
+//     break;
+//   case 3:
+//     turlar = "chillak";
+//     break;
+//   case 4:
+//     turlar = "qarg'a";
+//     break;
+//   default:
+//     turlar = "xato";
+// }
+
+// console.log(`${qiymatlar} ${turlar}`);
+
+// let son = 22; // Masalan, 22
+// let onlik = "";
+// let birlik = "";
+
+// switch (Math.floor(son / 10)) {
+//   case 1:
+//     onlik = "o'n";
+//     break;
+//   case 2:
+//     onlik = "yigirma";
+//     break;
+//   case 3:
+//     onlik = "o'ttiz";
+//     break;
+//   case 4:
+//     onlik = "qirq";
+//     break;
+//   case 5:
+//     onlik = "ellik";
+//     break;
+// }
+
+// switch (son % 10) {
+//   case 1:
+//     birlik = "bir";
+//     break;
+//   case 2:
+//     birlik = "ikki";
+//     break;
+//   case 3:
+//     birlik = "uch";
+//     break;
+//   case 4:
+//     birlik = "to'rt";
+//     break;
+//   case 5:
+//     birlik = "besh";
+//     break;
+//   case 6:
+//     birlik = "olti";
+//     break;
+//   case 7:
+//     birlik = "yetti";
+//     break;
+//   case 8:
+//     birlik = "sakkiz";
+//     break;
+//   case 9:
+//     birlik = "to'qqiz";
+//     break;
+// }
+
+// let result = `${onlik} ${birlik}ta masala`.trim();
+// console.log(result);
+
+// let num = 123; // Masalan, 123
+// let yuzlik = "";
+// let onlik = "";
+// let birlik = "";
+
+// switch (Math.floor(num / 100)) {
+//   case 1:
+//     yuzlik = "bir yuz";
+//     break;
+//   case 2:
+//     yuzlik = "ikki yuz";
+//     break;
+//   case 3:
+//     yuzlik = "uch yuz";
+//     break;
+//   case 4:
+//     yuzlik = "to'rt yuz";
+//     break;
+//   case 5:
+//     yuzlik = "besh yuz";
+//     break;
+//   case 6:
+//     yuzlik = "olti yuz";
+//     break;
+//   case 7:
+//     yuzlik = "yetti yuz";
+//     break;
+//   case 8:
+//     yuzlik = "sakkiz yuz";
+//     break;
+//   case 9:
+//     yuzlik = "to'qqiz yuz";
+//     break;
+// }
+
+// switch (Math.floor((num % 100) / 10)) {
+//   case 1:
+//     onlik = "o'n";
+//     break;
+//   case 2:
+//     onlik = "yigirma";
+//     break;
+//   case 3:
+//     onlik = "o'ttiz";
+//     break;
+//   case 4:
+//     onlik = "qirq";
+//     break;
+//   case 5:
+//     onlik = "ellik";
+//     break;
+//   case 6:
+//     onlik = "oltmish";
+//     break;
+//   case 7:
+//     onlik = "yetmish";
+//     break;
+//   case 8:
+//     onlik = "sakson";
+//     break;
+//   case 9:
+//     onlik = "to'qson";
+//     break;
+// }
+
+// switch (num % 10) {
+//   case 1:
+//     birlik = "bir";
+//     break;
+//   case 2:
+//     birlik = "ikki";
+//     break;
+//   case 3:
+//     birlik = "uch";
+//     break;
+//   case 4:
+//     birlik = "to'rt";
+//     break;
+//   case 5:
+//     birlik = "besh";
+//     break;
+//   case 6:
+//     birlik = "olti";
+//     break;
+//   case 7:
+//     birlik = "yetti";
+//     break;
+//   case 8:
+//     birlik = "sakkiz";
+//     break;
+//   case 9:
+//     birlik = "to'qqiz";
+//     break;
+// }
+
+// let result = `${yuzlik} ${onlik} ${birlik}`.trim();
+// console.log(result);
+
+// let year = 1984; // Masalan, 1984 yili
+// let color = "";
+// let animal = "";
+
+// switch ((year - 1984) % 5) {
+//   case 0:
+//     color = "yashil";
+//     break;
+//   case 1:
+//     color = "qizil";
+//     break;
+//   case 2:
+//     color = "sariq";
+//     break;
+//   case 3:
+//     color = "oq";
+//     break;
+//   case 4:
+//     color = "qora";
+//     break;
+// }
+
+// switch ((year - 1984) % 12) {
+//   case 0:
+//     animal = "sichqon";
+//     break;
+//   case 1:
+//     animal = "sigir";
+//     break;
+//   case 2:
+//     animal = "yo'lbars";
+//     break;
+//   case 3:
+//     animal = "quyon";
+//     break;
+//   case 4:
+//     animal = "ajdar";
+//     break;
+//   case 5:
+//     animal = "ilon";
+//     break;
+//   case 6:
+//     animal = "ot";
+//     break;
+//   case 7:
+//     animal = "qo'y";
+//     break;
+//   case 8:
+//     animal = "maymun";
+//     break;
+//   case 9:
+//     animal = "tovuq";
+//     break;
+//   case 10:
+//     animal = "it";
+//     break;
+//   case 11:
+//     animal = "to'ng'iz";
+//     break;
+// }
+
+// console.log(`${color} ${animal} yili`);
