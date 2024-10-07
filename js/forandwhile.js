@@ -1,11 +1,26 @@
 // ﻿DARSDA KO’RILISHI KERAK BO’LGAN MASALALAR
 
 // For1. k va n butun sonlari berilgan (n > 0). k sonini n marta chiqaruvchi programma tuzilsin.
-
+// let n = 3;
+// let k = 4;
+// for (let i = 0; i < n; i++) {
+//   console.log(k);
+// }
 // For2. Bir kg konfetning narxi berilgan (haqiqiy son). 0.1, 0.2, …, 0.9, 1 kg konfetni narxini chiqaruvchi programma tuzilsin.
+// let sum = 10000;
+// let n = 1;
 
+// for (let i = 0; i < n; i += 0.1) {
+//   console.log((sum * i).toFixed());
+// }
 // For3. n butun soni berilgan (n > 0). Quyidagi yig'indini hisoblovchi programma tuzilsin.
 // S = n^2 +(n+1)^2+(n+2)^2 + ... +(2*n)^2
+// let res = 0;
+// let n = 5;
+// for (let i = 0; i <= n; i++) {
+//   res += i ** 2;
+// }
+// console.log(res);
 
 // For4. N butun soni berilgan. Quyidagi yig'indini chiqaruvchi programma tuzilsin.
 // 1^N+2^(N-1) + ...+ N^1
@@ -13,10 +28,36 @@
 // 1 ^ 5 + 2 ^ 4 + 3 ^ 3 + 4 ^ 2 + 5 ^ 1
 // Output: 65
 
+// let n = 5;
+
+// let res = 0;
+
+// for (let i = 0; i <= n; i++) {
+//   res += i ** (n - i + 1);
+
+//   console.log(n - i + 1);
+// }
+
+// console.log(res);
+
 // For5. A va B butun soni berilgan (A < B). A va B sonlari orasidagi barcha butun sonlarni chiqaruvchi programma tuzilsin. Bunda har bir son o'zining qiymaticha chiqarilsin. Ya'ni 3 soni 3 marta chiqariladi.
 
-// For6. Sonning bo’luvchilarini topish;
+// let A = 5;
+// let B = 10;
 
+// for (let i = A; i <= B; i++) {
+//   for (let j = 0; j <= i; j++) {
+//     console.log(i);
+//   }
+// }
+
+// For6. Sonning bo’luvchilarini topish;
+// let n = 12;
+// for (let i = 0; i < n; i++) {
+//   if (n % i == 0) {
+//     console.log(i);
+//   }
+// }
 // While1. N va K butun musbat sonlari berilgan. Faqat ayirish va qo'shish amallarini ishlatib N sonini K soniga bo'lgandagi qoldiq va butun qismini aniqlovchi programma tuzilsin.
 
 // While2. 2 sonining qandaydir darajasini bildiruvchi n butun soni berilgan (n > 0). n = 2^k ni aniqlovchi programma tuzilsin.
