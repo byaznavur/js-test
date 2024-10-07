@@ -57,12 +57,30 @@
 //   if (n % i == 0) {
 //     console.log(i);
 //   }
-// }
+//
 // While1. N va K butun musbat sonlari berilgan. Faqat ayirish va qo'shish amallarini ishlatib N sonini K soniga bo'lgandagi qoldiq va butun qismini aniqlovchi programma tuzilsin.
+// let N = 1213;
+// let K = 6;
+// let res = 0;
+// while (N >= K) {
+//   N -= K;
+//   res++;
+// }
+
+// console.log(res + " Qiymat", N + " Qoldiq");
 
 // While2. 2 sonining qandaydir darajasini bildiruvchi n butun soni berilgan (n > 0). n = 2^k ni aniqlovchi programma tuzilsin.
 // Input: 128
 // Output: 7
+
+// let num = 64;
+// let count = 0;
+// while (num != 1) {
+//   num /= 2;
+//   count++;
+// }
+
+// console.log(count);
 
 // UYGA VAZIFA
 
