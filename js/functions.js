@@ -285,45 +285,187 @@ console.log(digitNth(1057, 5)); // -1
 
 //! Func15. isPalindrom(N) mantiqiy funksiyasini hosil qiling. (N > 0). Agar N soni palindrom bo'lsa - true, aks holda false qiymat qaytarilsin. inverseNumber funksiyasidan foydalaning. Palindromik son - chapda ham, o’ngdan ham o’qilganda bir xil bo’ladigan son. Masalan, 123321, 78987. QY
 // isPalindrom(1678761) => true
-function isPalindrom(N) {
-  let orginal = N;
-  let reserev = 0;
-  while (N > 0) {
-    reserev = reserev * 10 + (N % 10);
-    N = Math.floor(N / 10);
-  }
+// function isPalindrom(N) {
+//   let orginal = N;
+//   let reserev = 0;
+//   while (N > 0) {
+//     reserev = reserev * 10 + (N % 10);
+//     N = Math.floor(N / 10);
+//   }
 
-  return reserev === orginal;
-}
+//   return reserev === orginal;
+// }
 
-let res = isPalindrom(1678761);
-console.log(res);
+// let res = isPalindrom(1678761);
+// console.log(res);
 
 //! Func16. 1 dan N ga sonlar ko’paytmasini qaytaruvchi factorial(N) nomli funksiya hosil qiling. Agar N manfiy bo’lib qolsa, 1 qaytarilsin. QY
 
+// function factorial(n) {
+//   if (n <= 1) {
+//     return 1;
+//   }
+
+//   let res = 1;
+
+//   for (let i = 1; i <= n; i++) {
+//     res *= i;
+//   }
+
+//   return res;
+// }
+
+// console.log(factorial(6));
+
 //! Func17. 1 dan N bo’lgan sonlar ichida 3 bo’linadigan sonlar yig’indisini hisoblovchi getSum3(N) nomli dastur yozing.
 // getSum3(15) => 45
+// function getSum3(n) {
+//   let sum = 0;
+//   for (let i = 1; i <= n; i++) {
+//     if (i % 3 === 0) {
+//       sum += i;
+//     }
+//   }
+
+//   return sum;
+// }
+
+// console.log(getSum3(15));
 
 //! Func18. 1 dan N ga sonlar bo’lgan juft va toqlar sonlar yig’indisini qaytaruvchi sumOddEven(N) nomli funksiya hosil qiling. QYM
 // sumOddEven(10) => 30, 25
+function sumOddEven(n) {
+  let sumOdd = 0;
+  let sumEvem = 0;
+  for (let i = 1; i <= n; i += 2) {
+    sumOdd += i;
+  }
+
+  for (let i = 0; i <= n; i += 2) {
+    sumEvem += i;
+  }
+
+  return { sumEvem, sumOdd };
+}
+
+console.log(sumOddEven(10));
 
 //! Func19. invertTime(H, M, S) funksiyasini hosil qiling. H - soat, M - minut, S - sekund. Funksiya orqali berilgan soat, minut va sekundni T sekundga almashtiruvchi programma tuzilsin.
 // invertTime(0, 6, 40) => 400
+function invertTime(H, M, S) {
+  return H * 3600 + M * 60 + S; // H soatni sekundga, M minutni sekundga aylantirib yig'indini qaytaramiz
+}
+
+console.log(invertTime(0, 6, 40)); // 400
 
 //! Func20. decTime(H, M, S) funksiyasini hosil qiling. H - soat, M - minut, S - sekund. Funksiya berilgan vaqtdan 1 sekund oldingi vaqtni ko’rsatsin.
 // decTime(0, 6, 40) => 00:06:39
 
+function decTime(H, M, S) {
+  S -= 1; // Sekundni 1 ga kamaytiramiz
+  if (S < 0) {
+    S = 59;
+    M -= 1; // Sekund 0 bo'lsa, minutdan 1 olinadi
+    if (M < 0) {
+      M = 59;
+      H -= 1; // Minut ham 0 bo'lsa, soatdan 1 olinadi
+      if (H < 0) {
+        H = 23; // Soat 0 bo'lsa, 23 ga qaytamiz
+      }
+    }
+  }
+
+  // Formatlangan vaqtdan foydalanamiz
+  return `${String(H).padStart(2, "0")}:${String(M).padStart(2, "0")}:${String(
+    S
+  ).padStart(2, "0")}`;
+}
+
+console.log(decTime(0, 6, 40)); // 00:06:39
+
 //! Func21. Mantiqiy qiymat qaytaruvchi isLeapYear(Y) funksiyasini hosil qiling. Funksiya berilgan Y - yil kabisa yili bo'lsa true, aks holda false qiymat qaytarsin.
+function isLeapYear(Y) {
+  return (Y % 4 === 0 && Y % 100 !== 0) || Y % 400 === 0; // Kabisa yil shartlari
+}
+
+console.log(isLeapYear(2020)); // true
+console.log(isLeapYear(2021)); // false
 
 //! Func22. isLeapYear(Y) funksiyasidan foydalangan xolda, butun qiymat qaytaruvchi monthDays(M, Y) funksiyasini hosil qiling. Funksiya berilgan Y - yilning M - oyi kunlar sonini qaytarsin.
 // monthDays(2, 2020) => 28
 // monthDays(3, 2021) => 31
 
+function monthDays(M, Y) {
+  const daysInMonth = [
+    31,
+    isLeapYear(Y) ? 29 : 28,
+    31,
+    30,
+    31,
+    30,
+    31,
+    31,
+    30,
+    31,
+    30,
+    31,
+  ]; // Har oy uchun kunlar soni
+  return daysInMonth[M - 1]; // Oy indekslari 0 dan boshlanadi
+}
+
+console.log(monthDays(2, 2020)); // 29 (kabisa yili)
+console.log(monthDays(2, 2021)); // 28
+console.log(monthDays(3, 2021)); // 31
+
 //! Func23. monthDays funksiyasidan foydalangan xolda, prevDate (D, M, Y) funksiyasini hosil qiling. Funksiya berilgan sanadan oldingi sanani aniqlasin, D - kun, Y - yil, M - oyini qaytarsin. QY
 // prevDate (10, 3, 2022) => 09.03.2022
 
+function prevDate(D, M, Y) {
+  D -= 1;
+  if (D < 1) {
+    M -= 1;
+    if (M < 1) {
+      M = 12;
+      Y -= 1;
+    }
+    D = monthDays(M, Y);
+  }
+  return `${String(D).padStart(2, "0")}.${String(M).padStart(2, "0")}.${Y}`;
+}
+
+console.log(prevDate(10, 3, 2022)); // 09.03.2022
+
 //! Func24. monthDays funksiyasidan foydalangan xolda, nextDate(D, M, Y) funksiyasini hosil qiling. Funksiya berilgan sanadan keying sanani aniqlasin, D-kun, Y yil, M - oyini qaytarsin. QY
 // nextDate (10, 3, 2022) => 11.03.2022
+function nextDate(D, M, Y) {
+  D += 1;
+  if (D > monthDays(M, Y)) {
+    D = 1;
+    M += 1;
+    if (M > 12) {
+      M = 1;
+      Y += 1;
+    }
+  }
+  return `${String(D).padStart(2, "0")}.${String(M).padStart(2, "0")}.${Y}`;
+}
+
+console.log(nextDate(10, 3, 2022)); // 11.03.2022
 
 //! Func25. N sonining bo’luvchilari soni va bo’luvchilari yi’gindisini chiqaruvchi getDividersNumberAndSum(N) nomli funksiya yozing. QYM
 // getDividersNumberAndSum(12) => 6, 24
+function getDividersNumberAndSum(N) {
+  let count = 0;
+  let sum = 0;
+
+  for (let i = 1; i <= N; i++) {
+    if (N % i === 0) {
+      count++;
+      sum += i;
+    }
+  }
+
+  return { count, sum };
+}
+
+console.log(getDividersNumberAndSum(12)); // { count: 6, sum: 28 }
