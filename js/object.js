@@ -1,5 +1,7 @@
 // DARSDA KO’RILISHI KERAK BO’LGAN MASALALAR
 
+const { array } = require("prop-types");
+
 // Quyidagi massivdagi barcha odamlarni yoshlarining o’rtacha qiymatini chiqaruvchi getAverageAge(arr) nomli funksiya yozing.
 
 // Input: const people = [
@@ -9,6 +11,24 @@
 //   { name: "Sardor", age: 20 },
 // ];
 // Output: 27.25
+// const people = [
+//   { name: "Abdulaziz", age: 33 },
+//   { name: "Erkin", age: 22 },
+//   { name: "Temur", age: 34 },
+//   { name: "Sardor", age: 20 },
+// ];
+// function getAverageAge(people) {
+//   let sum = 0;
+
+//   for (let person of people) {
+//     sum += person.age;
+//   }
+
+//   return sum / people.length;
+// }
+
+// let res = getAverageAge(people);
+// console.log(res);
 
 // Massiv ichidagi har bir objectga isMarried nomli property qo’shilsin. Agar object yoshi 25 dan kichi bo’lsa isMarried ga false, aks holda true qiymat o’zlashtirilsin.
 
@@ -19,20 +39,103 @@
 //   { name: "Sardor", age: 20, isMarried: false },
 // ];
 
+// const people = [
+//   { name: "Abdulaziz", age: 33 },
+//   { name: "Erkin", age: 22 },
+//   { name: "Temur", age: 34 },
+//   { name: "Sardor", age: 20 },
+// ];
+
+// function addIsMarriedProperty(people) {
+//   for (let i = 0; i < people.length; i++) {
+//     if (people[i].age >= 25) {
+//       people[i].isMarried = true;
+//     } else {
+//       people[i].isMarried = false;
+//     }
+//   }
+//   return people; // Massivni qaytarish
+// }
+
+// let res = addIsMarriedProperty(people);
+
+// console.log(res);
+
 // Quyidagi objectlardan tuzilgan massiv ichidagi yoshi eng katta va yoshi eng kichik bo’lgan insonning ismlarini qaytaruvchi getNameMaxMinAge(arr) nomli funksiya yozing. (for)
 
 // 	Output: ["Temur", "Sardor"]
+
+// const people = [
+//   { name: "Abdulaziz", age: 33 },
+//   { name: "Erkin", age: 22 },
+//   { name: "Temur", age: 34 },
+//   { name: "Sardor", age: 20 },
+// ];
+
+// function getNameMaxMinAge(people) {
+//   let maxAgePerson = people[0];
+//   let minAgePerson = people[0];
+
+//   for (let el of people) {
+//     if (el.age > maxAgePerson.age) {
+//       maxAgePerson = el;
+//     }
+//     if (el.age < minAgePerson.age) {
+//       minAgePerson = el;
+//     }
+//   }
+//   return [minAgePerson.name, maxAgePerson.name];
+// }
+
+// let res = getNameMaxMinAge(people);
+// console.log(res);
 
 // Objectda turli xil kalitlar bir xil qiymatlarga ega, kalitlari o'sha qiymatlardan iborat shunday object tuzingki, bu objectning qiymatlari massiv ko'rinishidagi eski objectning kalitlarlaridan iborat bo'lsin.
 
 // Input: {1: 20, 2: 30, 3: 20, 4: 40, 5: 30, 6: 50, 7: 40, 8: 20}
 // Output: {20: [1, 3, 8], 30: [2, 5], 40: [4, 7]: 50: [6]}
+// let obj = { 1: 20, 2: 30, 3: 20, 4: 40, 5: 30, 6: 50, 7: 40, 8: 20 };
+// let result = {};
+
+// for (let key in obj) {
+//   let value = obj[key];
+
+//   // Agar qiymat allaqachon 'result' da mavjud bo'lsa, massivga yangi kalitni qo'shing
+//   if (result[value]) {
+//     result[value].push(key);
+//   } else {
+//     // Agar qiymat mavjud bo'lmasa, yangi massiv yaratib, kalitni qo'shing
+//     result[value] = [key];
+//   }
+// }
+
+// console.log(result);
 
 // Ikkita object berilgan ularning ba'zi kalitlari bir xil. Bir xil kalitlaridan iborat bo'lmagan yangi object hosil qiling.
 
 // Input: obj1 = { a: 3, b: 10, c: 5, d: 7 };
 // obj2 = { a: 10, d: 4, e: 6, f: 15 };
 // Output: obj = {b: 10, c: 5, e: 6, f: 15};
+// let obj1 = { a: 3, b: 10, c: 5, d: 7 };
+// let obj2 = { a: 10, d: 4, e: 6, f: 15 };
+
+// let obj = {};
+
+// // obj1 ni aylanib, faqat obj2 da yo'q kalitlarni qo'shamiz
+// for (let key in obj1) {
+//   if (!(key in obj2)) {
+//     obj[key] = obj1[key];
+//   }
+// }
+
+// // obj2 ni aylanib, faqat obj1 da yo'q kalitlarni qo'shamiz
+// for (let key in obj2) {
+//   if (!(key in obj1)) {
+//     obj[key] = obj2[key];
+//   }
+// }
+
+// console.log(obj);
 
 // UYGA VAZIFA
 
